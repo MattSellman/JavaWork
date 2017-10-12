@@ -9,13 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/*
+
 import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
 
 public class k_nearest_neighbour {
-/*
-    //Refactored code... Because the stuff Dan gave us was a nightmare to read.
 
     static CSVWriter writer;
     static ArrayList<String[]> trainingData, testingData;//this array will contain the dataset
@@ -96,15 +94,6 @@ public class k_nearest_neighbour {
         System.out.println("Specifity: " + specifity);
     }
 
-    /*
-     * Uses given string to attempt file opening. Proceeds to transfer contents of file
-     * into the data field.
-     *
-     * Returns the data, and declares the number of instances of said data.
-     */
-
-
-/*
     static ArrayList<String[]> populateDataSet(String datasetfile) throws IOException{
         ArrayList<String[]> data = new ArrayList<String[]>();
         String [] nextLine;
@@ -196,47 +185,6 @@ public class k_nearest_neighbour {
     }
 
 
-
-    /*
-     * Normalisation logic
-     * Iterates through columns. Grabs the largest and smallest values in a column and
-     * scales them to values between 0 and 1.
-     */
-
-/*
-    static ArrayList<String[]> normalize(ArrayList<String[]> data){
-        //Parse each entry to a float...
-
-        for(int i = 1; i < 10; i++){ //Iterating over columns. Data[][1-10] contain the values to normalise
-            Float max = null, min = null;
-            for(String[] temp : data){ //Iterating over rows.
-                //Assigning the floats.
-                min = (min == null || Float.parseFloat(temp[i]) < min) ? Float.parseFloat(temp[i]) : min;
-                max = (max == null || Float.parseFloat(temp[i]) > max) ? Float.parseFloat(temp[i]) : max;
-            }
-            //Min and max should be defined by now.
-            //System.out.println("Min: " + min);
-            for(String[] temp : data){
-                Float tempString = normalize(Float.parseFloat(temp[i]), min, max);
-                //System.out.println("Col " + i + ": " + tempString);
-                temp[i] = Float.toString(tempString);
-            }
-        }
-        return data;
-    }
-
-    /*
-     * Normalisation arithmatic
-     * return (n-min)/(max-min);
-     * Got the equation from here:
-	 * http://www.dataminingblog.com/standardization-vs-normalization/
-     */
-/*
-    static float normalize(float n, float min, float max){
-
-        return (n-min)/(max-min);
-    }
-
     static boolean isInArray(int[] results, int index){
         for(int temp : results){
             if(temp == index) return true;
@@ -309,7 +257,7 @@ public class k_nearest_neighbour {
      * -1 if not contained.
      */
 
-/*
+
     static int getPatientIndex(ArrayList<String[]> data, float id){
         for(String[] temp : data){
             if(Float.parseFloat(temp[0]) == id){
@@ -320,4 +268,3 @@ public class k_nearest_neighbour {
         return -1;
     }
 }
-*/
