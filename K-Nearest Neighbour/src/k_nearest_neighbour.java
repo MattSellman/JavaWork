@@ -1,6 +1,3 @@
-/**
- * Created by Karstan on 21/06/2017.
- */
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
